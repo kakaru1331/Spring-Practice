@@ -11,7 +11,7 @@ public class Main {
 		srcDirs.add("srcResources");	
 		
 		Project sampleProject = new Project();
-		sampleProject.setStrcDirs(srcDirs);
+		sampleProject.setSrcDirs(srcDirs);
 		sampleProject.setBinDir("bin");
 		
 		MavenBuildRunner buildRunner = new MavenBuildRunner();

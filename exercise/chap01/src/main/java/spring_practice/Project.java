@@ -7,7 +7,7 @@ public class Project {
 	private List<String> srcDirs;
 	private String binDir;		
 	
-	public void setStrcDirs(List<String> srcDirs) {
+	public void setSrcDirs(List<String> srcDirs) {
 		this.srcDirs = srcDirs;
 	}
 	
