@@ -37,8 +37,14 @@ public class HomeController {
 	}
 	
 	@RequestMapping(value = "/login-form")
-	public String login(Model model) {
+	public String loginForm(Model model) {
 		
 		return "login-form";
+	}
+	
+	@RequestMapping(value = "/login")
+	public String login(Model model) {
+		
+		return "login";
 	}
 }
