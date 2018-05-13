@@ -14,33 +14,19 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>#</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<style>
-    
-</style>
 </head>
 <body>
-	<%
-		UserDAO userDAO = new UserDAO();
-		int ret = userDAO.login(user.getId(), user.getPassword());
-		PrintWriter script = response.getWriter();
-		script.println("<script>");
-		
-		if (ret == 1)
-			script.println("location.href = 'main.jsp'");
-		else if (ret == 0) {
-			script.println("alert('비밀번호를 확인해주세요.')");
-			script.println("history.back()");			
-		} else if (ret == -1) {
-			script.println("alert('아이디를 확인해주세요.')");
-			script.println("history.back()");			
-		} else if (ret == -2) {
-			script.println("alert('오류가 발생했습니다.')");
-			script.println("history.back()");
-		}		
-		
-		script.println("</script>");
-	%>
-
+<script type="text/javascript">
+	var ret = ${ret};
+	
+	if (ret == 0) {
+		alert('아이디를 확인해주세요.')
+		history.back();
+	} else {
+		alert('일치하는 아이디가 없습니다.')
+		history.back();
+	}
+</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
